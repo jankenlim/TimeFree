@@ -1,0 +1,28 @@
+﻿body {
+    background: #e9f0f9;
+    height: 100%;
+}
+
+#termpadcontrolholder {
+    text-align: center;
+}
+
+.block {
+    color: white;
+    height: 15%;
+    min-height: 15%;
+    max-height: 15%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.blockinner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #06a1d8 !important;
+}
+
+.blockinner > h2 {
+    margin-top: 5px;
+}

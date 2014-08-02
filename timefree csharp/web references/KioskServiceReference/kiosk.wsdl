@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllSiteAdmins">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllSiteAdminsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllSiteAdminsResult" type="tns:TFAllSiteAdminsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFAllSiteAdminsResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteAdminList" type="tns:ArrayOfTFSiteAdminDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTFSiteAdminDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TFSiteAdminDetails" nillable="true" type="tns:TFSiteAdminDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TFSiteAdminDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="adminID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="filler1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="filler2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAWTbyTran">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAWTbyTranResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAWTbyTranResult" type="tns:TFGetAWTResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFGetAWTResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AWTMinutes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CutoffStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="sendername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="compID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branchID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="trigger_value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="trigger_time" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addTFUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userDetails" type="tns:TFUserDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFUserDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="userReferenceNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="queueNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="awt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dateServed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dateCalled" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="smsTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addTFUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addTFUserResult" type="tns:TFUserResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFUserResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDetails" type="tns:TFUserDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addTFUserJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addTFUserJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addTFUserJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllTranTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllTranTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTranTypesResult" type="tns:TFTranTypeDtlListResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFTranTypeDtlListResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionTypes" type="tns:ArrayOfTFTranTypeDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTFTranTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TFTranTypeDetails" nillable="true" type="tns:TFTranTypeDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TFTranTypeDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="groupType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="info" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="prefix" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SLA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="iconName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllTranTypesJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllTranTypesJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllTranTypesJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getKioskWaitingCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getKioskWaitingCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getKioskWaitingCountResult" type="tns:TFKioskWaitingCountResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFKioskWaitingCountResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="waitingCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="responseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="responseMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCurrentServingListJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCurrentServingListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCurrentServingListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCurrentServingList">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCurrentServingListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCurrentServingListResult" type="tns:TFCurrentServingListResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TFCurrentServingListResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CurrentServingList" type="tns:ArrayOfTFCurrentServing" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTFCurrentServing">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TFCurrentServing" nillable="true" type="tns:TFCurrentServing" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TFCurrentServing">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ServingID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="queueNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TFUserID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="counterNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="retrieveWorkActivities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TrackNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveWorkActivitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveWorkActivitiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="TFAllSiteAdminsResponse" nillable="true" type="tns:TFAllSiteAdminsResponse" />
+      <s:element name="TFGetAWTResponse" nillable="true" type="tns:TFGetAWTResponse" />
+      <s:element name="TFTranTypeDtlListResponse" nillable="true" type="tns:TFTranTypeDtlListResponse" />
+      <s:element name="TFKioskWaitingCountResponse" nillable="true" type="tns:TFKioskWaitingCountResponse" />
+      <s:element name="TFCurrentServingListResponse" nillable="true" type="tns:TFCurrentServingListResponse" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllSiteAdminsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllSiteAdmins" />
+  </wsdl:message>
+  <wsdl:message name="getAllSiteAdminsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllSiteAdminsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranSoapIn">
+    <wsdl:part name="parameters" element="tns:getAWTbyTran" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranSoapOut">
+    <wsdl:part name="parameters" element="tns:getAWTbyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserSoapIn">
+    <wsdl:part name="parameters" element="tns:addTFUser" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserSoapOut">
+    <wsdl:part name="parameters" element="tns:addTFUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:addTFUserJSON" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:addTFUserJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTranTypes" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTranTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllTranTypesJSON" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllTranTypesJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountSoapIn">
+    <wsdl:part name="parameters" element="tns:getKioskWaitingCount" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountSoapOut">
+    <wsdl:part name="parameters" element="tns:getKioskWaitingCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getCurrentServingListJSON" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getCurrentServingListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListSoapIn">
+    <wsdl:part name="parameters" element="tns:getCurrentServingList" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListSoapOut">
+    <wsdl:part name="parameters" element="tns:getCurrentServingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveWorkActivities" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveWorkActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllSiteAdminsHttpGetIn" />
+  <wsdl:message name="getAllSiteAdminsHttpGetOut">
+    <wsdl:part name="Body" element="tns:TFAllSiteAdminsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranHttpGetIn">
+    <wsdl:part name="tranType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranHttpGetOut">
+    <wsdl:part name="Body" element="tns:TFGetAWTResponse" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONHttpGetIn">
+    <wsdl:part name="tranType" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesHttpGetIn" />
+  <wsdl:message name="getAllTranTypesHttpGetOut">
+    <wsdl:part name="Body" element="tns:TFTranTypeDtlListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesJSONHttpGetIn" />
+  <wsdl:message name="getAllTranTypesJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountHttpGetIn">
+    <wsdl:part name="tranType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountHttpGetOut">
+    <wsdl:part name="Body" element="tns:TFKioskWaitingCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListJSONHttpGetIn" />
+  <wsdl:message name="getCurrentServingListJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListHttpGetIn" />
+  <wsdl:message name="getCurrentServingListHttpGetOut">
+    <wsdl:part name="Body" element="tns:TFCurrentServingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesHttpGetIn">
+    <wsdl:part name="TrackNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllSiteAdminsHttpPostIn" />
+  <wsdl:message name="getAllSiteAdminsHttpPostOut">
+    <wsdl:part name="Body" element="tns:TFAllSiteAdminsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranHttpPostIn">
+    <wsdl:part name="tranType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAWTbyTranHttpPostOut">
+    <wsdl:part name="Body" element="tns:TFGetAWTResponse" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONHttpPostIn">
+    <wsdl:part name="tranType" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="addTFUserJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesHttpPostIn" />
+  <wsdl:message name="getAllTranTypesHttpPostOut">
+    <wsdl:part name="Body" element="tns:TFTranTypeDtlListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllTranTypesJSONHttpPostIn" />
+  <wsdl:message name="getAllTranTypesJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountHttpPostIn">
+    <wsdl:part name="tranType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getKioskWaitingCountHttpPostOut">
+    <wsdl:part name="Body" element="tns:TFKioskWaitingCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListJSONHttpPostIn" />
+  <wsdl:message name="getCurrentServingListJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentServingListHttpPostIn" />
+  <wsdl:message name="getCurrentServingListHttpPostOut">
+    <wsdl:part name="Body" element="tns:TFCurrentServingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesHttpPostIn">
+    <wsdl:part name="TrackNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveWorkActivitiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="kioskSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <wsdl:input message="tns:getAllSiteAdminsSoapIn" />
+      <wsdl:output message="tns:getAllSiteAdminsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <wsdl:input message="tns:getAWTbyTranSoapIn" />
+      <wsdl:output message="tns:getAWTbyTranSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addTFUser">
+      <wsdl:input message="tns:addTFUserSoapIn" />
+      <wsdl:output message="tns:addTFUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <wsdl:input message="tns:addTFUserJSONSoapIn" />
+      <wsdl:output message="tns:addTFUserJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <wsdl:input message="tns:getAllTranTypesSoapIn" />
+      <wsdl:output message="tns:getAllTranTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <wsdl:input message="tns:getAllTranTypesJSONSoapIn" />
+      <wsdl:output message="tns:getAllTranTypesJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <wsdl:input message="tns:getKioskWaitingCountSoapIn" />
+      <wsdl:output message="tns:getKioskWaitingCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <wsdl:input message="tns:getCurrentServingListJSONSoapIn" />
+      <wsdl:output message="tns:getCurrentServingListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <wsdl:input message="tns:getCurrentServingListSoapIn" />
+      <wsdl:output message="tns:getCurrentServingListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <wsdl:input message="tns:retrieveWorkActivitiesSoapIn" />
+      <wsdl:output message="tns:retrieveWorkActivitiesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="kioskHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <wsdl:input message="tns:getAllSiteAdminsHttpGetIn" />
+      <wsdl:output message="tns:getAllSiteAdminsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <wsdl:input message="tns:getAWTbyTranHttpGetIn" />
+      <wsdl:output message="tns:getAWTbyTranHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <wsdl:input message="tns:addTFUserJSONHttpGetIn" />
+      <wsdl:output message="tns:addTFUserJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <wsdl:input message="tns:getAllTranTypesHttpGetIn" />
+      <wsdl:output message="tns:getAllTranTypesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <wsdl:input message="tns:getAllTranTypesJSONHttpGetIn" />
+      <wsdl:output message="tns:getAllTranTypesJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <wsdl:input message="tns:getKioskWaitingCountHttpGetIn" />
+      <wsdl:output message="tns:getKioskWaitingCountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <wsdl:input message="tns:getCurrentServingListJSONHttpGetIn" />
+      <wsdl:output message="tns:getCurrentServingListJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <wsdl:input message="tns:getCurrentServingListHttpGetIn" />
+      <wsdl:output message="tns:getCurrentServingListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <wsdl:input message="tns:retrieveWorkActivitiesHttpGetIn" />
+      <wsdl:output message="tns:retrieveWorkActivitiesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="kioskHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <wsdl:input message="tns:getAllSiteAdminsHttpPostIn" />
+      <wsdl:output message="tns:getAllSiteAdminsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <wsdl:input message="tns:getAWTbyTranHttpPostIn" />
+      <wsdl:output message="tns:getAWTbyTranHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <wsdl:input message="tns:addTFUserJSONHttpPostIn" />
+      <wsdl:output message="tns:addTFUserJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <wsdl:input message="tns:getAllTranTypesHttpPostIn" />
+      <wsdl:output message="tns:getAllTranTypesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <wsdl:input message="tns:getAllTranTypesJSONHttpPostIn" />
+      <wsdl:output message="tns:getAllTranTypesJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <wsdl:input message="tns:getKioskWaitingCountHttpPostIn" />
+      <wsdl:output message="tns:getKioskWaitingCountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <wsdl:input message="tns:getCurrentServingListJSONHttpPostIn" />
+      <wsdl:output message="tns:getCurrentServingListJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <wsdl:input message="tns:getCurrentServingListHttpPostIn" />
+      <wsdl:output message="tns:getCurrentServingListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <wsdl:input message="tns:retrieveWorkActivitiesHttpPostIn" />
+      <wsdl:output message="tns:retrieveWorkActivitiesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="kioskSoap" type="tns:kioskSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <soap:operation soapAction="http://tempuri.org/getAllSiteAdmins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <soap:operation soapAction="http://tempuri.org/getAWTbyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUser">
+      <soap:operation soapAction="http://tempuri.org/addTFUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <soap:operation soapAction="http://tempuri.org/addTFUserJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <soap:operation soapAction="http://tempuri.org/getAllTranTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <soap:operation soapAction="http://tempuri.org/getAllTranTypesJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <soap:operation soapAction="http://tempuri.org/getKioskWaitingCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <soap:operation soapAction="http://tempuri.org/getCurrentServingListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <soap:operation soapAction="http://tempuri.org/getCurrentServingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <soap:operation soapAction="http://tempuri.org/retrieveWorkActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="kioskSoap12" type="tns:kioskSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <soap12:operation soapAction="http://tempuri.org/getAllSiteAdmins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <soap12:operation soapAction="http://tempuri.org/getAWTbyTran" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUser">
+      <soap12:operation soapAction="http://tempuri.org/addTFUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <soap12:operation soapAction="http://tempuri.org/addTFUserJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <soap12:operation soapAction="http://tempuri.org/getAllTranTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <soap12:operation soapAction="http://tempuri.org/getAllTranTypesJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <soap12:operation soapAction="http://tempuri.org/getKioskWaitingCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <soap12:operation soapAction="http://tempuri.org/getCurrentServingListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <soap12:operation soapAction="http://tempuri.org/getCurrentServingList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <soap12:operation soapAction="http://tempuri.org/retrieveWorkActivities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="kioskHttpGet" type="tns:kioskHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <http:operation location="/getAllSiteAdmins" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <http:operation location="/getAWTbyTran" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <http:operation location="/addTFUserJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <http:operation location="/getAllTranTypes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <http:operation location="/getAllTranTypesJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <http:operation location="/getKioskWaitingCount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <http:operation location="/getCurrentServingListJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <http:operation location="/getCurrentServingList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <http:operation location="/retrieveWorkActivities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="kioskHttpPost" type="tns:kioskHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllSiteAdmins">
+      <http:operation location="/getAllSiteAdmins" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAWTbyTran">
+      <http:operation location="/getAWTbyTran" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTFUserJSON">
+      <http:operation location="/addTFUserJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypes">
+      <http:operation location="/getAllTranTypes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTranTypesJSON">
+      <http:operation location="/getAllTranTypesJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKioskWaitingCount">
+      <http:operation location="/getKioskWaitingCount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingListJSON">
+      <http:operation location="/getCurrentServingListJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentServingList">
+      <http:operation location="/getCurrentServingList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveWorkActivities">
+      <http:operation location="/retrieveWorkActivities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="kiosk">
+    <wsdl:port name="kioskSoap" binding="tns:kioskSoap">
+      <soap:address location="https://tfqmsservicessit.azurewebsites.net/kiosk.asmx" />
+    </wsdl:port>
+    <wsdl:port name="kioskSoap12" binding="tns:kioskSoap12">
+      <soap12:address location="https://tfqmsservicessit.azurewebsites.net/kiosk.asmx" />
+    </wsdl:port>
+    <wsdl:port name="kioskHttpGet" binding="tns:kioskHttpGet">
+      <http:address location="https://tfqmsservicessit.azurewebsites.net/kiosk.asmx" />
+    </wsdl:port>
+    <wsdl:port name="kioskHttpPost" binding="tns:kioskHttpPost">
+      <http:address location="https://tfqmsservicessit.azurewebsites.net/kiosk.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

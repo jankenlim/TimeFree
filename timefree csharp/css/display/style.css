@@ -1,0 +1,93 @@
+body {
+	background-color: #e9f0f9 !important;
+	font-family: "Open Sans", sans-serif;
+}
+
+*{
+	border-radius: 0px !important;
+}
+
+.displaycounter {
+	padding-right: 0px !important;
+}
+
+.displaycounter > h2 {
+    margin-top: 5px;
+}
+
+.darkblue {
+    background: #003247 !important;
+}
+
+.skyblue {
+    background: #06a1d8;
+}
+
+#BlinkDiv{
+        -webkit-transition: background 1.0s ease;
+        -moz-transition:    background 1.0s ease;
+        -ms-transition:     background 1.0s ease;
+        transition:         background 1.0s ease;
+    }
+
+.b-blue{
+	background: #06a1d8;
+	color: #fff;
+	-webkit-transition:background 1s ease;
+	-moz-transition:background 1s ease;
+	-o-transition:background 1s ease;
+	transition:background 1s ease;	
+	cursor:default;		
+	min-height: 180px !important;
+	padding: 3px 25px 10px 25px;
+}
+
+.b-blue h1{
+	font-weight: bold;
+	font-size: 6em;
+	margin-top: 5px !important;
+}
+
+.b-blue h2 {
+	font-size: 3em;
+	margin-top: 5px !important;
+}
+
+.b-blue hr {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+
+.b-blue:hover{
+	background: #003247;
+	-webkit-transition:background 1s ease;
+	-moz-transition:background 1s ease;
+	-o-transition:background 1s ease;
+	transition:background 1s ease;		
+}
+
+video {
+    width: 100%;
+    min-width: 100%;
+}
+
+#vidplay{
+    padding-right: 0px !important;
+}
+
+#modalcontent {
+    background-color: #06a1d8;
+    color: white;
+}
+
+#modalcontent > h1 {
+    font-size: 4em;
+}
+
+#queueNo {
+    font-size: 5em;
+    padding: 15px;
+    background: #003247;
+    font-weight: bold;
+}

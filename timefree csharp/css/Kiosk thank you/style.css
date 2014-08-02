@@ -1,0 +1,29 @@
+﻿body {
+    background: #06a1d8;
+    color: white;
+}
+
+.container {
+    height: 100%;
+}
+
+h1, h2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#queuenumber {
+    font-size: 5em;
+    background: #003247;
+    padding: 5px;
+}
+
+#estimatetime {
+    font-size: 3em;
+    background: #003247;
+    padding: 5px;
+}
+
+#poweredby {
+    font-style:oblique;
+}

@@ -1,0 +1,1142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22434E6C-0874-4F04-889D-94763C2A1919}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeFree_csharp</RootNamespace>
+    <AssemblyName>TimeFree csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\TimeFree csharp.dll" />
+    <Content Include="bin\TimeFree csharp.pdb" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\button.css" />
+    <Content Include="CSS\display\style.css" />
+    <Content Include="CSS\kiosk fewer\buttonanimate.css" />
+    <Content Include="CSS\kiosk fewer\default.css" />
+    <Content Include="CSS\kiosk fewer\style.css" />
+    <Content Include="CSS\Kiosk thank you\style.css" />
+    <Content Include="CSS\modal.css" />
+    <Content Include="CSS\termpad\style.css" />
+    <Content Include="Display.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="IMG\Erik Spoelstra for SMART Infinity.mp4" />
+    <Content Include="IMG\icon-blue\a9.png" />
+    <Content Include="IMG\icon-blue\airplaine23.png" />
+    <Content Include="IMG\icon-blue\alarm20.png" />
+    <Content Include="IMG\icon-blue\antique19.png" />
+    <Content Include="IMG\icon-blue\ascending11.png" />
+    <Content Include="IMG\icon-blue\ascending9.png" />
+    <Content Include="IMG\icon-blue\auction.png" />
+    <Content Include="IMG\icon-blue\bag19.png" />
+    <Content Include="IMG\icon-blue\bag20.png" />
+    <Content Include="IMG\icon-blue\bag21.png" />
+    <Content Include="IMG\icon-blue\bag22.png" />
+    <Content Include="IMG\icon-blue\bag23.png" />
+    <Content Include="IMG\icon-blue\bag24.png" />
+    <Content Include="IMG\icon-blue\bag25.png" />
+    <Content Include="IMG\icon-blue\bank5.png" />
+    <Content Include="IMG\icon-blue\bank6.png" />
+    <Content Include="IMG\icon-blue\banking1.png" />
+    <Content Include="IMG\icon-blue\barcode3.png" />
+    <Content Include="IMG\icon-blue\barcode4.png" />
+    <Content Include="IMG\icon-blue\bars41.png" />
+    <Content Include="IMG\icon-blue\bars42.png" />
+    <Content Include="IMG\icon-blue\basket10.png" />
+    <Content Include="IMG\icon-blue\basket11.png" />
+    <Content Include="IMG\icon-blue\basket12.png" />
+    <Content Include="IMG\icon-blue\basket13.png" />
+    <Content Include="IMG\icon-blue\basket14.png" />
+    <Content Include="IMG\icon-blue\bill1.png" />
+    <Content Include="IMG\icon-blue\binoculars11.png" />
+    <Content Include="IMG\icon-blue\bitcoin102.png" />
+    <Content Include="IMG\icon-blue\black207.png" />
+    <Content Include="IMG\icon-blue\black334.png" />
+    <Content Include="IMG\icon-blue\box38.png" />
+    <Content Include="IMG\icon-blue\box39.png" />
+    <Content Include="IMG\icon-blue\box41.png" />
+    <Content Include="IMG\icon-blue\briefcase12.png" />
+    <Content Include="IMG\icon-blue\briefcase13.png" />
+    <Content Include="IMG\icon-blue\business102.png" />
+    <Content Include="IMG\icon-blue\business121.png" />
+    <Content Include="IMG\icon-blue\businessman102.png" />
+    <Content Include="IMG\icon-blue\businessman108.png" />
+    <Content Include="IMG\icon-blue\businessman109.png" />
+    <Content Include="IMG\icon-blue\businessman117.png" />
+    <Content Include="IMG\icon-blue\businessman80.png" />
+    <Content Include="IMG\icon-blue\businessman88.png" />
+    <Content Include="IMG\icon-blue\businessman89.png" />
+    <Content Include="IMG\icon-blue\businessmen13.png" />
+    <Content Include="IMG\icon-blue\businessmen22.png" />
+    <Content Include="IMG\icon-blue\cabinet5.png" />
+    <Content Include="IMG\icon-blue\cabinet6.png" />
+    <Content Include="IMG\icon-blue\calculator46.png" />
+    <Content Include="IMG\icon-blue\calendar136.png" />
+    <Content Include="IMG\icon-blue\calendar56.png" />
+    <Content Include="IMG\icon-blue\calendar57.png" />
+    <Content Include="IMG\icon-blue\calendar59.png" />
+    <Content Include="IMG\icon-blue\calendar60.png" />
+    <Content Include="IMG\icon-blue\calendar61.png" />
+    <Content Include="IMG\icon-blue\call38.png" />
+    <Content Include="IMG\icon-blue\card18.png" />
+    <Content Include="IMG\icon-blue\cash4.png" />
+    <Content Include="IMG\icon-blue\cashier1.png" />
+    <Content Include="IMG\icon-blue\central3.png" />
+    <Content Include="IMG\icon-blue\chronometer11.png" />
+    <Content Include="IMG\icon-blue\clock40.png" />
+    <Content Include="IMG\icon-blue\clock41.png" />
+    <Content Include="IMG\icon-blue\clock42.png" />
+    <Content Include="IMG\icon-blue\clock60.png" />
+    <Content Include="IMG\icon-blue\cloth4.png" />
+    <Content Include="IMG\icon-blue\coffee22.png" />
+    <Content Include="IMG\icon-blue\coin11.png" />
+    <Content Include="IMG\icon-blue\coin12.png" />
+    <Content Include="IMG\icon-blue\coin13.png" />
+    <Content Include="IMG\icon-blue\coin9.png" />
+    <Content Include="IMG\icon-blue\coins13.png" />
+    <Content Include="IMG\icon-blue\coins14.png" />
+    <Content Include="IMG\icon-blue\coins15.png" />
+    <Content Include="IMG\icon-blue\coins16.png" />
+    <Content Include="IMG\icon-blue\coins17.png" />
+    <Content Include="IMG\icon-blue\computer148.png" />
+    <Content Include="IMG\icon-blue\connected22.png" />
+    <Content Include="IMG\icon-blue\copyright1.png" />
+    <Content Include="IMG\icon-blue\credit41.png" />
+    <Content Include="IMG\icon-blue\credit42.png" />
+    <Content Include="IMG\icon-blue\credit43.png" />
+    <Content Include="IMG\icon-blue\credit44.png" />
+    <Content Include="IMG\icon-blue\credit45.png" />
+    <Content Include="IMG\icon-blue\credit46.png" />
+    <Content Include="IMG\icon-blue\credit47.png" />
+    <Content Include="IMG\icon-blue\credit48.png" />
+    <Content Include="IMG\icon-blue\credit49.png" />
+    <Content Include="IMG\icon-blue\credit50.png" />
+    <Content Include="IMG\icon-blue\credit51.png" />
+    <Content Include="IMG\icon-blue\credit52.png" />
+    <Content Include="IMG\icon-blue\credit53.png" />
+    <Content Include="IMG\icon-blue\credit54.png" />
+    <Content Include="IMG\icon-blue\credit55.png" />
+    <Content Include="IMG\icon-blue\credit69.png" />
+    <Content Include="IMG\icon-blue\crown28.png" />
+    <Content Include="IMG\icon-blue\cut21.png" />
+    <Content Include="IMG\icon-blue\daily14.png" />
+    <Content Include="IMG\icon-blue\daily4.png" />
+    <Content Include="IMG\icon-blue\daily5.png" />
+    <Content Include="IMG\icon-blue\dart13.png" />
+    <Content Include="IMG\icon-blue\day8.png" />
+    <Content Include="IMG\icon-blue\desk4.png" />
+    <Content Include="IMG\icon-blue\desktop27.png" />
+    <Content Include="IMG\icon-blue\diamond24.png" />
+    <Content Include="IMG\icon-blue\diamond25.png" />
+    <Content Include="IMG\icon-blue\document126.png" />
+    <Content Include="IMG\icon-blue\document63.png" />
+    <Content Include="IMG\icon-blue\dollar103.png" />
+    <Content Include="IMG\icon-blue\dollar135.png" />
+    <Content Include="IMG\icon-blue\dollar136.png" />
+    <Content Include="IMG\icon-blue\dollar91.png" />
+    <Content Include="IMG\icon-blue\dollar92.png" />
+    <Content Include="IMG\icon-blue\dollars19.png" />
+    <Content Include="IMG\icon-blue\dollars26.png" />
+    <Content Include="IMG\icon-blue\dollars27.png" />
+    <Content Include="IMG\icon-blue\euro47.png" />
+    <Content Include="IMG\icon-blue\euro48.png" />
+    <Content Include="IMG\icon-blue\factory14.png" />
+    <Content Include="IMG\icon-blue\four36.png" />
+    <Content Include="IMG\icon-blue\full22.png" />
+    <Content Include="IMG\icon-blue\game47.png" />
+    <Content Include="IMG\icon-blue\gears4.png" />
+    <Content Include="IMG\icon-blue\gift50.png" />
+    <Content Include="IMG\icon-blue\graduation36.png" />
+    <Content Include="IMG\icon-blue\graphic26.png" />
+    <Content Include="IMG\icon-blue\graphic27.png" />
+    <Content Include="IMG\icon-blue\hammer43.png" />
+    <Content Include="IMG\icon-blue\hand64.png" />
+    <Content Include="IMG\icon-blue\hand65.png" />
+    <Content Include="IMG\icon-blue\hand72.png" />
+    <Content Include="IMG\icon-blue\hands7.png" />
+    <Content Include="IMG\icon-blue\hole.png" />
+    <Content Include="IMG\icon-blue\hour7.png" />
+    <Content Include="IMG\icon-blue\hourglass9.png" />
+    <Content Include="IMG\icon-blue\human98.png" />
+    <Content Include="IMG\icon-blue\idea14.png" />
+    <Content Include="IMG\icon-blue\imbalanced.png" />
+    <Content Include="IMG\icon-blue\invoice.png" />
+    <Content Include="IMG\icon-blue\laser.png" />
+    <Content Include="IMG\icon-blue\line38.png" />
+    <Content Include="IMG\icon-blue\location29.png" />
+    <Content Include="IMG\icon-blue\man250.png" />
+    <Content Include="IMG\icon-blue\man262.png" />
+    <Content Include="IMG\icon-blue\man268.png" />
+    <Content Include="IMG\icon-blue\man303.png" />
+    <Content Include="IMG\icon-blue\market2.png" />
+    <Content Include="IMG\icon-blue\megaphone3.png" />
+    <Content Include="IMG\icon-blue\message4.png" />
+    <Content Include="IMG\icon-blue\money108.png" />
+    <Content Include="IMG\icon-blue\money109.png" />
+    <Content Include="IMG\icon-blue\money13.png" />
+    <Content Include="IMG\icon-blue\money14.png" />
+    <Content Include="IMG\icon-blue\money15.png" />
+    <Content Include="IMG\icon-blue\money16.png" />
+    <Content Include="IMG\icon-blue\money17.png" />
+    <Content Include="IMG\icon-blue\money18.png" />
+    <Content Include="IMG\icon-blue\money19.png" />
+    <Content Include="IMG\icon-blue\money20.png" />
+    <Content Include="IMG\icon-blue\money21.png" />
+    <Content Include="IMG\icon-blue\money22.png" />
+    <Content Include="IMG\icon-blue\money24.png" />
+    <Content Include="IMG\icon-blue\money25.png" />
+    <Content Include="IMG\icon-blue\money26.png" />
+    <Content Include="IMG\icon-blue\money27.png" />
+    <Content Include="IMG\icon-blue\money28.png" />
+    <Content Include="IMG\icon-blue\money29.png" />
+    <Content Include="IMG\icon-blue\money30.png" />
+    <Content Include="IMG\icon-blue\money31.png" />
+    <Content Include="IMG\icon-blue\money32.png" />
+    <Content Include="IMG\icon-blue\money33.png" />
+    <Content Include="IMG\icon-blue\money34.png" />
+    <Content Include="IMG\icon-blue\money35.png" />
+    <Content Include="IMG\icon-blue\money36.png" />
+    <Content Include="IMG\icon-blue\money37.png" />
+    <Content Include="IMG\icon-blue\money38.png" />
+    <Content Include="IMG\icon-blue\money39.png" />
+    <Content Include="IMG\icon-blue\money40.png" />
+    <Content Include="IMG\icon-blue\moneybag.png" />
+    <Content Include="IMG\icon-blue\moneybag1.png" />
+    <Content Include="IMG\icon-blue\mug3.png" />
+    <Content Include="IMG\icon-blue\new48.png" />
+    <Content Include="IMG\icon-blue\nlp3.png" />
+    <Content Include="IMG\icon-blue\note12.png" />
+    <Content Include="IMG\icon-blue\note13.png" />
+    <Content Include="IMG\icon-blue\note14.png" />
+    <Content Include="IMG\icon-blue\notebook23.png" />
+    <Content Include="IMG\icon-blue\notebook24.png" />
+    <Content Include="IMG\icon-blue\notebook25.png" />
+    <Content Include="IMG\icon-blue\notebook32.png" />
+    <Content Include="IMG\icon-blue\office23.png" />
+    <Content Include="IMG\icon-blue\office24.png" />
+    <Content Include="IMG\icon-blue\offices.png" />
+    <Content Include="IMG\icon-blue\packaging.png" />
+    <Content Include="IMG\icon-blue\paper76.png" />
+    <Content Include="IMG\icon-blue\paperclip10.png" />
+    <Content Include="IMG\icon-blue\paperclip11.png" />
+    <Content Include="IMG\icon-blue\peephole1.png" />
+    <Content Include="IMG\icon-blue\percentage5.png" />
+    <Content Include="IMG\icon-blue\person281.png" />
+    <Content Include="IMG\icon-blue\personal18.png" />
+    <Content Include="IMG\icon-blue\phone325.png" />
+    <Content Include="IMG\icon-blue\pie51.png" />
+    <Content Include="IMG\icon-blue\piggy7.png" />
+    <Content Include="IMG\icon-blue\piggy9.png" />
+    <Content Include="IMG\icon-blue\pin26.png" />
+    <Content Include="IMG\icon-blue\pin27.png" />
+    <Content Include="IMG\icon-blue\platform10.png" />
+    <Content Include="IMG\icon-blue\platform11.png" />
+    <Content Include="IMG\icon-blue\power87.png" />
+    <Content Include="IMG\icon-blue\precious.png" />
+    <Content Include="IMG\icon-blue\price3.png" />
+    <Content Include="IMG\icon-blue\print22.png" />
+    <Content Include="IMG\icon-blue\printed7.png" />
+    <Content Include="IMG\icon-blue\purchase.png" />
+    <Content Include="IMG\icon-blue\puzzle27.png" />
+    <Content Include="IMG\icon-blue\receipt.png" />
+    <Content Include="IMG\icon-blue\receipt1.png" />
+    <Content Include="IMG\icon-blue\receipt2.png" />
+    <Content Include="IMG\icon-blue\receipt3.png" />
+    <Content Include="IMG\icon-blue\receipt4.png" />
+    <Content Include="IMG\icon-blue\receipt5.png" />
+    <Content Include="IMG\icon-blue\receipt6.png" />
+    <Content Include="IMG\icon-blue\receipt7.png" />
+    <Content Include="IMG\icon-blue\receipt8.png" />
+    <Content Include="IMG\icon-blue\refresh47.png" />
+    <Content Include="IMG\icon-blue\rfid.png" />
+    <Content Include="IMG\icon-blue\rubber6.png" />
+    <Content Include="IMG\icon-blue\safe10.png" />
+    <Content Include="IMG\icon-blue\safe11.png" />
+    <Content Include="IMG\icon-blue\safe12.png" />
+    <Content Include="IMG\icon-blue\sales.png" />
+    <Content Include="IMG\icon-blue\saving1.png" />
+    <Content Include="IMG\icon-blue\searching29.png" />
+    <Content Include="IMG\icon-blue\searching31.png" />
+    <Content Include="IMG\icon-blue\shelf1.png" />
+    <Content Include="IMG\icon-blue\shelves.png" />
+    <Content Include="IMG\icon-blue\shield65.png" />
+    <Content Include="IMG\icon-blue\shop3.png" />
+    <Content Include="IMG\icon-blue\shop4.png" />
+    <Content Include="IMG\icon-blue\shop5.png" />
+    <Content Include="IMG\icon-blue\shop6.png" />
+    <Content Include="IMG\icon-blue\shopping100.png" />
+    <Content Include="IMG\icon-blue\shopping101.png" />
+    <Content Include="IMG\icon-blue\shopping102.png" />
+    <Content Include="IMG\icon-blue\shopping103.png" />
+    <Content Include="IMG\icon-blue\shopping104.png" />
+    <Content Include="IMG\icon-blue\shopping105.png" />
+    <Content Include="IMG\icon-blue\shopping106.png" />
+    <Content Include="IMG\icon-blue\shopping107.png" />
+    <Content Include="IMG\icon-blue\shopping164.png" />
+    <Content Include="IMG\icon-blue\shopping71.png" />
+    <Content Include="IMG\icon-blue\shopping72.png" />
+    <Content Include="IMG\icon-blue\shopping73.png" />
+    <Content Include="IMG\icon-blue\shopping74.png" />
+    <Content Include="IMG\icon-blue\shopping75.png" />
+    <Content Include="IMG\icon-blue\shopping78.png" />
+    <Content Include="IMG\icon-blue\shopping79.png" />
+    <Content Include="IMG\icon-blue\shopping80.png" />
+    <Content Include="IMG\icon-blue\shopping81.png" />
+    <Content Include="IMG\icon-blue\shopping82.png" />
+    <Content Include="IMG\icon-blue\shopping83.png" />
+    <Content Include="IMG\icon-blue\shopping84.png" />
+    <Content Include="IMG\icon-blue\shopping85.png" />
+    <Content Include="IMG\icon-blue\shopping86.png" />
+    <Content Include="IMG\icon-blue\shopping87.png" />
+    <Content Include="IMG\icon-blue\shopping88.png" />
+    <Content Include="IMG\icon-blue\shopping89.png" />
+    <Content Include="IMG\icon-blue\shopping90.png" />
+    <Content Include="IMG\icon-blue\shopping91.png" />
+    <Content Include="IMG\icon-blue\shopping92.png" />
+    <Content Include="IMG\icon-blue\shopping93.png" />
+    <Content Include="IMG\icon-blue\shopping94.png" />
+    <Content Include="IMG\icon-blue\shopping95.png" />
+    <Content Include="IMG\icon-blue\shopping96.png" />
+    <Content Include="IMG\icon-blue\shopping97.png" />
+    <Content Include="IMG\icon-blue\shopping98.png" />
+    <Content Include="IMG\icon-blue\shopping99.png" />
+    <Content Include="IMG\icon-blue\shredder.png" />
+    <Content Include="IMG\icon-blue\smartcard.png" />
+    <Content Include="IMG\icon-blue\speaker60.png" />
+    <Content Include="IMG\icon-blue\stapler.png" />
+    <Content Include="IMG\icon-blue\sticky.png" />
+    <Content Include="IMG\icon-blue\stock3.png" />
+    <Content Include="IMG\icon-blue\stopwatch2.png" />
+    <Content Include="IMG\icon-blue\stopwatch3.png" />
+    <Content Include="IMG\icon-blue\store4.png" />
+    <Content Include="IMG\icon-blue\store5.png" />
+    <Content Include="IMG\icon-blue\tablet70.png" />
+    <Content Include="IMG\icon-blue\tea9.png" />
+    <Content Include="IMG\icon-blue\terminal8.png" />
+    <Content Include="IMG\icon-blue\theatre.png" />
+    <Content Include="IMG\icon-blue\three112.png" />
+    <Content Include="IMG\icon-blue\thumb32.png" />
+    <Content Include="IMG\icon-blue\thumb33.png" />
+    <Content Include="IMG\icon-blue\tie1.png" />
+    <Content Include="IMG\icon-blue\timer24.png" />
+    <Content Include="IMG\icon-blue\tool9.png" />
+    <Content Include="IMG\icon-blue\trading.png" />
+    <Content Include="IMG\icon-blue\trading1.png" />
+    <Content Include="IMG\icon-blue\transport5.png" />
+    <Content Include="IMG\icon-blue\triangle26.png" />
+    <Content Include="IMG\icon-blue\two199.png" />
+    <Content Include="IMG\icon-blue\two204.png" />
+    <Content Include="IMG\icon-blue\two205.png" />
+    <Content Include="IMG\icon-blue\two210.png" />
+    <Content Include="IMG\icon-blue\umbrella27.png" />
+    <Content Include="IMG\icon-blue\up75.png" />
+    <Content Include="IMG\icon-blue\urban7.png" />
+    <Content Include="IMG\icon-blue\user122.png" />
+    <Content Include="IMG\icon-blue\verification6.png" />
+    <Content Include="IMG\icon-blue\wallet11.png" />
+    <Content Include="IMG\icon-blue\wallet15.png" />
+    <Content Include="IMG\icon-blue\withdraw.png" />
+    <Content Include="IMG\icon-blue\world82.png" />
+    <Content Include="IMG\icon-blue\yen28.png" />
+    <Content Include="IMG\icon-blue\zig.png" />
+    <Content Include="IMG\icons\a9.svg" />
+    <Content Include="IMG\icons\airplane69.svg" />
+    <Content Include="IMG\icons\alarm20.svg" />
+    <Content Include="IMG\icons\antique19.svg" />
+    <Content Include="IMG\icons\ascending11.svg" />
+    <Content Include="IMG\icons\ascending9.svg" />
+    <Content Include="IMG\icons\auction.svg" />
+    <Content Include="IMG\icons\bag19.svg" />
+    <Content Include="IMG\icons\bag20.svg" />
+    <Content Include="IMG\icons\bag21.svg" />
+    <Content Include="IMG\icons\bag22.svg" />
+    <Content Include="IMG\icons\bag23.svg" />
+    <Content Include="IMG\icons\bag24.svg" />
+    <Content Include="IMG\icons\bag25.svg" />
+    <Content Include="IMG\icons\bank5.svg" />
+    <Content Include="IMG\icons\bank6.svg" />
+    <Content Include="IMG\icons\banking1.svg" />
+    <Content Include="IMG\icons\barcode3.svg" />
+    <Content Include="IMG\icons\barcode4.svg" />
+    <Content Include="IMG\icons\bars41.svg" />
+    <Content Include="IMG\icons\bars42.svg" />
+    <Content Include="IMG\icons\basket10.svg" />
+    <Content Include="IMG\icons\basket11.svg" />
+    <Content Include="IMG\icons\basket12.svg" />
+    <Content Include="IMG\icons\basket13.svg" />
+    <Content Include="IMG\icons\basket14.svg" />
+    <Content Include="IMG\icons\bill1.svg" />
+    <Content Include="IMG\icons\binoculars11.svg" />
+    <Content Include="IMG\icons\bitcoin102.svg" />
+    <Content Include="IMG\icons\black207.svg" />
+    <Content Include="IMG\icons\black334.svg" />
+    <Content Include="IMG\icons\box38.svg" />
+    <Content Include="IMG\icons\box39.svg" />
+    <Content Include="IMG\icons\box41.svg" />
+    <Content Include="IMG\icons\briefcase12.svg" />
+    <Content Include="IMG\icons\briefcase13.svg" />
+    <Content Include="IMG\icons\business102.svg" />
+    <Content Include="IMG\icons\business121.svg" />
+    <Content Include="IMG\icons\businessman102.svg" />
+    <Content Include="IMG\icons\businessman108.svg" />
+    <Content Include="IMG\icons\businessman109.svg" />
+    <Content Include="IMG\icons\businessman117.svg" />
+    <Content Include="IMG\icons\businessman80.svg" />
+    <Content Include="IMG\icons\businessman88.svg" />
+    <Content Include="IMG\icons\businessman89.svg" />
+    <Content Include="IMG\icons\businessmen13.svg" />
+    <Content Include="IMG\icons\businessmen22.svg" />
+    <Content Include="IMG\icons\cabinet5.svg" />
+    <Content Include="IMG\icons\cabinet6.svg" />
+    <Content Include="IMG\icons\calculator46.svg" />
+    <Content Include="IMG\icons\calendar136.svg" />
+    <Content Include="IMG\icons\calendar56.svg" />
+    <Content Include="IMG\icons\calendar57.svg" />
+    <Content Include="IMG\icons\calendar59.svg" />
+    <Content Include="IMG\icons\calendar60.svg" />
+    <Content Include="IMG\icons\calendar61.svg" />
+    <Content Include="IMG\icons\call38.svg" />
+    <Content Include="IMG\icons\card18.svg" />
+    <Content Include="IMG\icons\cash4.svg" />
+    <Content Include="IMG\icons\cashier1.svg" />
+    <Content Include="IMG\icons\central3.svg" />
+    <Content Include="IMG\icons\chronometer11.svg" />
+    <Content Include="IMG\icons\clock40.svg" />
+    <Content Include="IMG\icons\clock41.svg" />
+    <Content Include="IMG\icons\clock42.svg" />
+    <Content Include="IMG\icons\clock60.svg" />
+    <Content Include="IMG\icons\cloth4.svg" />
+    <Content Include="IMG\icons\coffee22.svg" />
+    <Content Include="IMG\icons\coin11.svg" />
+    <Content Include="IMG\icons\coin12.svg" />
+    <Content Include="IMG\icons\coin13.svg" />
+    <Content Include="IMG\icons\coin9.svg" />
+    <Content Include="IMG\icons\coins13.svg" />
+    <Content Include="IMG\icons\coins14.svg" />
+    <Content Include="IMG\icons\coins15.svg" />
+    <Content Include="IMG\icons\coins16.svg" />
+    <Content Include="IMG\icons\coins17.svg" />
+    <Content Include="IMG\icons\computer148.svg" />
+    <Content Include="IMG\icons\connected22.svg" />
+    <Content Include="IMG\icons\copyright1.svg" />
+    <Content Include="IMG\icons\credit41.svg" />
+    <Content Include="IMG\icons\credit42.svg" />
+    <Content Include="IMG\icons\credit43.svg" />
+    <Content Include="IMG\icons\credit44.svg" />
+    <Content Include="IMG\icons\credit45.svg" />
+    <Content Include="IMG\icons\credit46.svg" />
+    <Content Include="IMG\icons\credit47.svg" />
+    <Content Include="IMG\icons\credit48.svg" />
+    <Content Include="IMG\icons\credit49.svg" />
+    <Content Include="IMG\icons\credit50.svg" />
+    <Content Include="IMG\icons\credit51.svg" />
+    <Content Include="IMG\icons\credit52.svg" />
+    <Content Include="IMG\icons\credit53.svg" />
+    <Content Include="IMG\icons\credit54.svg" />
+    <Content Include="IMG\icons\credit55.svg" />
+    <Content Include="IMG\icons\credit69.svg" />
+    <Content Include="IMG\icons\crown28.svg" />
+    <Content Include="IMG\icons\cut21.svg" />
+    <Content Include="IMG\icons\daily14.svg" />
+    <Content Include="IMG\icons\daily4.svg" />
+    <Content Include="IMG\icons\daily5.svg" />
+    <Content Include="IMG\icons\dart13.svg" />
+    <Content Include="IMG\icons\day8.svg" />
+    <Content Include="IMG\icons\desk4.svg" />
+    <Content Include="IMG\icons\desktop27.svg" />
+    <Content Include="IMG\icons\diamond24.svg" />
+    <Content Include="IMG\icons\diamond25.svg" />
+    <Content Include="IMG\icons\document126.svg" />
+    <Content Include="IMG\icons\document63.svg" />
+    <Content Include="IMG\icons\dollar103.svg" />
+    <Content Include="IMG\icons\dollar135.svg" />
+    <Content Include="IMG\icons\dollar136.svg" />
+    <Content Include="IMG\icons\dollar91.svg" />
+    <Content Include="IMG\icons\dollar92.svg" />
+    <Content Include="IMG\icons\dollars19.svg" />
+    <Content Include="IMG\icons\dollars26.svg" />
+    <Content Include="IMG\icons\dollars27.svg" />
+    <Content Include="IMG\icons\euro47.svg" />
+    <Content Include="IMG\icons\euro48.svg" />
+    <Content Include="IMG\icons\factory14.svg" />
+    <Content Include="IMG\icons\four36.svg" />
+    <Content Include="IMG\icons\full22.svg" />
+    <Content Include="IMG\icons\game47.svg" />
+    <Content Include="IMG\icons\gears4.svg" />
+    <Content Include="IMG\icons\gift50.svg" />
+    <Content Include="IMG\icons\graduation36.svg" />
+    <Content Include="IMG\icons\graphic26.svg" />
+    <Content Include="IMG\icons\graphic27.svg" />
+    <Content Include="IMG\icons\hammer43.svg" />
+    <Content Include="IMG\icons\hand64.svg" />
+    <Content Include="IMG\icons\hand65.svg" />
+    <Content Include="IMG\icons\hand72.svg" />
+    <Content Include="IMG\icons\hands7.svg" />
+    <Content Include="IMG\icons\hole.svg" />
+    <Content Include="IMG\icons\hour7.svg" />
+    <Content Include="IMG\icons\hourglass9.svg" />
+    <Content Include="IMG\icons\human98.svg" />
+    <Content Include="IMG\icons\idea14.svg" />
+    <Content Include="IMG\icons\imbalanced.svg" />
+    <Content Include="IMG\icons\invoice.svg" />
+    <Content Include="IMG\icons\laser.svg" />
+    <Content Include="IMG\icons\line38.svg" />
+    <Content Include="IMG\icons\location29.svg" />
+    <Content Include="IMG\icons\man250.svg" />
+    <Content Include="IMG\icons\man262.svg" />
+    <Content Include="IMG\icons\man268.svg" />
+    <Content Include="IMG\icons\man303.svg" />
+    <Content Include="IMG\icons\market2.svg" />
+    <Content Include="IMG\icons\megaphone3.svg" />
+    <Content Include="IMG\icons\message4.svg" />
+    <Content Include="IMG\icons\money108.svg" />
+    <Content Include="IMG\icons\money109.svg" />
+    <Content Include="IMG\icons\money13.svg" />
+    <Content Include="IMG\icons\money14.svg" />
+    <Content Include="IMG\icons\money15.svg" />
+    <Content Include="IMG\icons\money16.svg" />
+    <Content Include="IMG\icons\money17.svg" />
+    <Content Include="IMG\icons\money18.svg" />
+    <Content Include="IMG\icons\money19.svg" />
+    <Content Include="IMG\icons\money20.svg" />
+    <Content Include="IMG\icons\money21.svg" />
+    <Content Include="IMG\icons\money22.svg" />
+    <Content Include="IMG\icons\money24.svg" />
+    <Content Include="IMG\icons\money25.svg" />
+    <Content Include="IMG\icons\money26.svg" />
+    <Content Include="IMG\icons\money27.svg" />
+    <Content Include="IMG\icons\money28.svg" />
+    <Content Include="IMG\icons\money29.svg" />
+    <Content Include="IMG\icons\money30.svg" />
+    <Content Include="IMG\icons\money31.svg" />
+    <Content Include="IMG\icons\money32.svg" />
+    <Content Include="IMG\icons\money33.svg" />
+    <Content Include="IMG\icons\money34.svg" />
+    <Content Include="IMG\icons\money35.svg" />
+    <Content Include="IMG\icons\money36.svg" />
+    <Content Include="IMG\icons\money37.svg" />
+    <Content Include="IMG\icons\money38.svg" />
+    <Content Include="IMG\icons\money39.svg" />
+    <Content Include="IMG\icons\money40.svg" />
+    <Content Include="IMG\icons\moneybag.svg" />
+    <Content Include="IMG\icons\moneybag1.svg" />
+    <Content Include="IMG\icons\mug3.svg" />
+    <Content Include="IMG\icons\new48.svg" />
+    <Content Include="IMG\icons\nlp3.svg" />
+    <Content Include="IMG\icons\note12.svg" />
+    <Content Include="IMG\icons\note13.svg" />
+    <Content Include="IMG\icons\note14.svg" />
+    <Content Include="IMG\icons\notebook23.svg" />
+    <Content Include="IMG\icons\notebook24.svg" />
+    <Content Include="IMG\icons\notebook25.svg" />
+    <Content Include="IMG\icons\notebook32.svg" />
+    <Content Include="IMG\icons\office23.svg" />
+    <Content Include="IMG\icons\office24.svg" />
+    <Content Include="IMG\icons\offices.svg" />
+    <Content Include="IMG\icons\packaging.svg" />
+    <Content Include="IMG\icons\paper76.svg" />
+    <Content Include="IMG\icons\paperclip10.svg" />
+    <Content Include="IMG\icons\paperclip11.svg" />
+    <Content Include="IMG\icons\peephole1.svg" />
+    <Content Include="IMG\icons\percentage5.svg" />
+    <Content Include="IMG\icons\person281.svg" />
+    <Content Include="IMG\icons\personal18.svg" />
+    <Content Include="IMG\icons\phone325.svg" />
+    <Content Include="IMG\icons\pie51.svg" />
+    <Content Include="IMG\icons\piggy7.svg" />
+    <Content Include="IMG\icons\piggy9.svg" />
+    <Content Include="IMG\icons\pin26.svg" />
+    <Content Include="IMG\icons\pin27.svg" />
+    <Content Include="IMG\icons\platform10.svg" />
+    <Content Include="IMG\icons\platform11.svg" />
+    <Content Include="IMG\icons\power87.svg" />
+    <Content Include="IMG\icons\precious.svg" />
+    <Content Include="IMG\icons\price3.svg" />
+    <Content Include="IMG\icons\print22.svg" />
+    <Content Include="IMG\icons\printed7.svg" />
+    <Content Include="IMG\icons\purchase.svg" />
+    <Content Include="IMG\icons\puzzle27.svg" />
+    <Content Include="IMG\icons\receipt.svg" />
+    <Content Include="IMG\icons\receipt1.svg" />
+    <Content Include="IMG\icons\receipt2.svg" />
+    <Content Include="IMG\icons\receipt3.svg" />
+    <Content Include="IMG\icons\receipt4.svg" />
+    <Content Include="IMG\icons\receipt5.svg" />
+    <Content Include="IMG\icons\receipt6.svg" />
+    <Content Include="IMG\icons\receipt7.svg" />
+    <Content Include="IMG\icons\receipt8.svg" />
+    <Content Include="IMG\icons\refresh47.svg" />
+    <Content Include="IMG\icons\rfid.svg" />
+    <Content Include="IMG\icons\rubber6.svg" />
+    <Content Include="IMG\icons\safe10.svg" />
+    <Content Include="IMG\icons\safe11.svg" />
+    <Content Include="IMG\icons\safe12.svg" />
+    <Content Include="IMG\icons\sales.svg" />
+    <Content Include="IMG\icons\saving1.svg" />
+    <Content Include="IMG\icons\searching29.svg" />
+    <Content Include="IMG\icons\searching31.svg" />
+    <Content Include="IMG\icons\shelf1.svg" />
+    <Content Include="IMG\icons\shelves.svg" />
+    <Content Include="IMG\icons\shield65.svg" />
+    <Content Include="IMG\icons\shop3.svg" />
+    <Content Include="IMG\icons\shop4.svg" />
+    <Content Include="IMG\icons\shop5.svg" />
+    <Content Include="IMG\icons\shop6.svg" />
+    <Content Include="IMG\icons\shopping100.svg" />
+    <Content Include="IMG\icons\shopping101.svg" />
+    <Content Include="IMG\icons\shopping102.svg" />
+    <Content Include="IMG\icons\shopping103.svg" />
+    <Content Include="IMG\icons\shopping104.svg" />
+    <Content Include="IMG\icons\shopping105.svg" />
+    <Content Include="IMG\icons\shopping106.svg" />
+    <Content Include="IMG\icons\shopping107.svg" />
+    <Content Include="IMG\icons\shopping164.svg" />
+    <Content Include="IMG\icons\shopping71.svg" />
+    <Content Include="IMG\icons\shopping72.svg" />
+    <Content Include="IMG\icons\shopping73.svg" />
+    <Content Include="IMG\icons\shopping74.svg" />
+    <Content Include="IMG\icons\shopping75.svg" />
+    <Content Include="IMG\icons\shopping78.svg" />
+    <Content Include="IMG\icons\shopping79.svg" />
+    <Content Include="IMG\icons\shopping80.svg" />
+    <Content Include="IMG\icons\shopping81.svg" />
+    <Content Include="IMG\icons\shopping82.svg" />
+    <Content Include="IMG\icons\shopping83.svg" />
+    <Content Include="IMG\icons\shopping84.svg" />
+    <Content Include="IMG\icons\shopping85.svg" />
+    <Content Include="IMG\icons\shopping86.svg" />
+    <Content Include="IMG\icons\shopping87.svg" />
+    <Content Include="IMG\icons\shopping88.svg" />
+    <Content Include="IMG\icons\shopping89.svg" />
+    <Content Include="IMG\icons\shopping90.svg" />
+    <Content Include="IMG\icons\shopping91.svg" />
+    <Content Include="IMG\icons\shopping92.svg" />
+    <Content Include="IMG\icons\shopping93.svg" />
+    <Content Include="IMG\icons\shopping94.svg" />
+    <Content Include="IMG\icons\shopping95.svg" />
+    <Content Include="IMG\icons\shopping96.svg" />
+    <Content Include="IMG\icons\shopping97.svg" />
+    <Content Include="IMG\icons\shopping98.svg" />
+    <Content Include="IMG\icons\shopping99.svg" />
+    <Content Include="IMG\icons\shredder.svg" />
+    <Content Include="IMG\icons\smartcard.svg" />
+    <Content Include="IMG\icons\speaker60.svg" />
+    <Content Include="IMG\icons\stapler.svg" />
+    <Content Include="IMG\icons\sticky.svg" />
+    <Content Include="IMG\icons\stock3.svg" />
+    <Content Include="IMG\icons\stopwatch2.svg" />
+    <Content Include="IMG\icons\stopwatch3.svg" />
+    <Content Include="IMG\icons\store4.svg" />
+    <Content Include="IMG\icons\store5.svg" />
+    <Content Include="IMG\icons\tablet70.svg" />
+    <Content Include="IMG\icons\tea9.svg" />
+    <Content Include="IMG\icons\terminal8.svg" />
+    <Content Include="IMG\icons\theatre.svg" />
+    <Content Include="IMG\icons\three112.svg" />
+    <Content Include="IMG\icons\thumb32.svg" />
+    <Content Include="IMG\icons\thumb33.svg" />
+    <Content Include="IMG\icons\tie1.svg" />
+    <Content Include="IMG\icons\timer24.svg" />
+    <Content Include="IMG\icons\tool9.svg" />
+    <Content Include="IMG\icons\trading.svg" />
+    <Content Include="IMG\icons\trading1.svg" />
+    <Content Include="IMG\icons\transport5.svg" />
+    <Content Include="IMG\icons\triangle26.svg" />
+    <Content Include="IMG\icons\two199.svg" />
+    <Content Include="IMG\icons\two204.svg" />
+    <Content Include="IMG\icons\two205.svg" />
+    <Content Include="IMG\icons\two210.svg" />
+    <Content Include="IMG\icons\umbrella27.svg" />
+    <Content Include="IMG\icons\up75.svg" />
+    <Content Include="IMG\icons\urban7.svg" />
+    <Content Include="IMG\icons\user122.svg" />
+    <Content Include="IMG\icons\verification6.svg" />
+    <Content Include="IMG\icons\wallet11.svg" />
+    <Content Include="IMG\icons\wallet15.svg" />
+    <Content Include="IMG\icons\withdraw.svg" />
+    <Content Include="IMG\icons\world82.svg" />
+    <Content Include="IMG\icons\yen28.svg" />
+    <Content Include="IMG\icons\zig.svg" />
+    <Content Include="IMG\logo.svg" />
+    <Content Include="IMG\logocompany.jpg" />
+    <Content Include="IMG\logocompany.png" />
+    <Content Include="IMG\logotimefree.png" />
+    <Content Include="IMG\icon-termpad\blue\call blue.png" />
+    <Content Include="IMG\icon-termpad\blue\endticket blue.png" />
+    <Content Include="IMG\icon-termpad\blue\next blue.png" />
+    <Content Include="IMG\icon-termpad\blue\no show blue.png" />
+    <Content Include="IMG\icon-termpad\blue\recall blue.png" />
+    <Content Include="IMG\icon-termpad\blue\repeatcall blue.png" />
+    <Content Include="IMG\icon-termpad\blue\transfer blue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\call darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\endticket darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\next darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\no show darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\recall darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\repeatcall darkblue.png" />
+    <Content Include="IMG\icon-termpad\darkblue\transfer darkblue.png" />
+    <Content Include="IMG\icon-termpad\white\call white.png" />
+    <Content Include="IMG\icon-termpad\white\endticket white.png" />
+    <Content Include="IMG\icon-termpad\white\next white.png" />
+    <Content Include="IMG\icon-termpad\white\no show white.png" />
+    <Content Include="IMG\icon-termpad\white\recall white.png" />
+    <Content Include="IMG\icon-termpad\white\repeatcall white.png" />
+    <Content Include="IMG\icon-termpad\white\transfer white.png" />
+    <Content Include="JS\bootstrap.js" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\classie.js" />
+    <Content Include="JS\css-filters-polyfill.js" />
+    <Content Include="JS\cssParser.js" />
+    <Content Include="JS\custom.js" />
+    <Content Include="JS\cycle.js" />
+    <Content Include="JS\display\main.js" />
+    <Content Include="JS\easing.js" />
+    <Content Include="JS\filter.js" />
+    <Content Include="JS\html5shim.js" />
+    <Content Include="JS\jquery.cslider.js" />
+    <Content Include="JS\jquery.flexslider-min.js" />
+    <Content Include="JS\jquery.isotope.js" />
+    <Content Include="JS\jquery.js" />
+    <Content Include="JS\jquery.prettyPhoto.js" />
+    <Content Include="JS\jquery.validate.min.js" />
+    <Content Include="JS\KioskFewer\Date.js" />
+    <Content Include="JS\KioskFewer\main.js" />
+    <Content Include="JS\modalEffects.js" />
+    <Content Include="JS\modernizr.custom.28468.js" />
+    <Content Include="JS\modernizr.custom.js" />
+    <Content Include="KioskFewer.aspx" />
+    <Content Include="KioskThankYou.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="bin\TimeFree csharp.dll.config" />
+    <Content Include="Termpad.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web References\KioskServiceReference\kiosk.wsdl" />
+    <Content Include="Web References\KioskServiceReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFAllSiteAdminsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFCurrentServingListResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFGetAWTResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFKioskWaitingCountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFTranTypeDtlListResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\KioskServiceReference\TFUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Display.aspx.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display.aspx.designer.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KioskFewer.aspx.cs">
+      <DependentUpon>KioskFewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KioskFewer.aspx.designer.cs">
+      <DependentUpon>KioskFewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KioskThankYou.aspx.cs">
+      <DependentUpon>KioskThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KioskThankYou.aspx.designer.cs">
+      <DependentUpon>KioskThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Structure\CurrentlyServing.cs" />
+    <Compile Include="Structure\getAllTranTypesJSONResults.cs" />
+    <Compile Include="Structure\getCurrentServingListJSONResults.cs" />
+    <Compile Include="Structure\CurrentServingList.cs" />
+    <Compile Include="Structure\Transactions.cs" />
+    <Compile Include="Structure\TransactionTypes.cs" />
+    <Compile Include="Structure\UserInfo.cs" />
+    <Compile Include="Termpad.aspx.cs">
+      <DependentUpon>Termpad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Termpad.aspx.designer.cs">
+      <DependentUpon>Termpad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\KioskServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\Dropbox\Jan Ken\TimeFree csharp\TimeFree csharp\kiosk.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\KioskServiceReference\</RelPath>
+      <UpdateFromURL>D:\Dropbox\Jan Ken\TimeFree csharp\TimeFree csharp\kiosk.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TimeFree_csharp_KioskServiceReference_kiosk</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54287</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54287/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

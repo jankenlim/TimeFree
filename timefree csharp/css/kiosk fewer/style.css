@@ -1,0 +1,155 @@
+﻿/* universal styles */
+
+html, body {
+    height:100%;
+    background-color: #06a1d8 !important;
+	font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration:none !important;
+}
+
+/*end universal styles*/
+
+#wrapper {
+    min-height:95%;
+    height:95%;
+    overflow: hidden !important;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px !important;
+}   
+
+#footer {
+    background-color: silver;
+    height:1.5em;
+    margin: -1.5em auto;
+}
+
+#header {
+    height:100px;
+    padding: 20px;
+    background: white;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+}
+
+#content {
+    height:70%;
+    min-height:70%;
+}
+
+.b-white {
+    background-color: white;
+    height: 80%;
+    min-height: 80%;
+    padding-left: 15px;
+}
+
+.b-darkblue {
+    background-color: #003247 !important;
+    color: white;
+    height: 20%;
+    min-height: 20%;
+    min-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.b-darkblue > h2 {
+    margin-top: 7px;
+}
+
+.imageholder {
+    height: 80% !important;
+    min-height: 80% !important;
+    margin-top: 90px;
+}
+
+.textholder {
+    height: 20%;
+    min-height: 20%;
+}
+
+.imageclip {
+    height: 40%;
+    overflow: hidden;
+    margin-top: 110px;
+}
+
+.col-lg-1 {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 100% !important;
+    min-height: 100% !important;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+* {
+    border-radius: 0 !important;
+}
+
+
+#leftpanel {
+    padding-top: 10px;
+}
+
+#rightpanel {
+    margin-top: 20px; 
+    height: 100%;
+    min-height: 100%;
+}
+
+#leftpanel > h1, #leftpanel > h2 {
+    margin-top: 7px !important;
+    margin-bottom: 0px !important;
+}
+
+#leftpanel > hr {
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.help-block {
+    color: white !important;
+}
+
+.btn-primary {
+    background: #06a1d8 !important;
+    border-color: white !important;
+}
+
+.btn-danger {
+    border-color: white !important;
+}
+
+#clockholder {
+    margin-top: 6px;
+    font-size: 2em;
+}
+
+.modal-content {
+    background: #06a1d8 !important;
+    color: white;
+}
+
+#queuenumber {
+    font-size: 5em;
+    background: #003247;
+    padding: 5px;
+}
+
+#estimatetime {
+    font-size: 3em;
+    background: #003247;
+    padding: 5px;
+}
