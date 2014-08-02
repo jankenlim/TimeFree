@@ -1,28 +1,76 @@
 ﻿body {
     background: #e9f0f9;
-    height: 100%;
+}
+
+* {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border: 0px !important;
 }
 
 #termpadcontrolholder {
     text-align: center;
+    min-height: 100%;
 }
 
 .block {
     color: white;
-    height: 15%;
-    min-height: 15%;
-    max-height: 15%;
     margin: 0 auto;
-    padding-top: 10px;
-    padding-left: 0px;
+    margin-bottom: 10px;
+    height: 15%;
+    min-height: 11%;
+    max-height: 11%;
+}
+
+.termpadbutton{
+    width: 100%;
+    height: 100%;
 }
 
 .blockinner {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #06a1d8 !important;
+    height: 100%;
+    width: 80%;
+    display: inline;
 }
 
-.blockinner > h2 {
-    margin-top: 5px;
+.darkblock {
+    background: #003274;
+    height: 100%;
 }
+
+.skyblock {
+    background: #06a1d8;
+    height: 100%;
+}
+
+.darkblock, .skyblock {
+    padding: 13px;
+}
+
+.skyblock > h4 {
+    margin-top: 2px;
+}
+
+h3, h2 {
+    margin-top: 0px;
+}
+
+.container {
+    width: 400px; 
+}
+
+.icons {
+    font-size: 25px;
+}
+
+html, body, .container, #termpadcontrolholder, .block {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+

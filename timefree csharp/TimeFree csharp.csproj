@@ -209,8 +209,12 @@
     <Content Include="CSS\kiosk fewer\style.css" />
     <Content Include="CSS\Kiosk thank you\style.css" />
     <Content Include="CSS\modal.css" />
+    <Content Include="CSS\termpadicons.css" />
     <Content Include="CSS\termpad\style.css" />
+    <Content Include="CSS\tficons.css" />
     <Content Include="Display.aspx" />
+    <Content Include="fonts\termpadicons.svg" />
+    <Content Include="fonts\tficons.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="IMG\Erik Spoelstra for SMART Infinity.mp4" />
     <Content Include="IMG\icon-blue\a9.png" />
@@ -896,6 +900,7 @@
     <Content Include="JS\modalEffects.js" />
     <Content Include="JS\modernizr.custom.28468.js" />
     <Content Include="JS\modernizr.custom.js" />
+    <Content Include="JS\Termpad\main.js" />
     <Content Include="KioskFewer.aspx" />
     <Content Include="KioskThankYou.aspx" />
     <Content Include="packages.config" />
@@ -905,7 +910,14 @@
     <Content Include="Account\Web.config" />
     <Content Include="bin\TimeFree csharp.dll.config" />
     <Content Include="Termpad.aspx" />
+    <Content Include="TermpadInit.aspx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="fonts\tficons.eot" />
+    <Content Include="fonts\tficons.ttf" />
+    <Content Include="fonts\tficons.woff" />
+    <Content Include="fonts\termpadicons.eot" />
+    <Content Include="fonts\termpadicons.ttf" />
+    <Content Include="fonts\termpadicons.woff" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1064,6 +1076,13 @@
     </Compile>
     <Compile Include="Termpad.aspx.designer.cs">
       <DependentUpon>Termpad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermpadInit.aspx.cs">
+      <DependentUpon>TermpadInit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermpadInit.aspx.designer.cs">
+      <DependentUpon>TermpadInit.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
