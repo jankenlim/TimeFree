@@ -151,6 +151,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
@@ -201,18 +202,24 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CSS\AdminDashboard\style.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\button.css" />
     <Content Include="CSS\display\style.css" />
+    <Content Include="CSS\font-awesome.css" />
+    <Content Include="CSS\font-awesome.min.css" />
     <Content Include="CSS\kiosk fewer\buttonanimate.css" />
     <Content Include="CSS\kiosk fewer\default.css" />
     <Content Include="CSS\kiosk fewer\style.css" />
     <Content Include="CSS\Kiosk thank you\style.css" />
+    <Content Include="CSS\metisMenu.css" />
     <Content Include="CSS\modal.css" />
     <Content Include="CSS\termpadicons.css" />
     <Content Include="CSS\termpad\style.css" />
     <Content Include="CSS\tficons.css" />
+    <Content Include="DashboardGeneralSetup.aspx" />
     <Content Include="Display.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\termpadicons.svg" />
     <Content Include="fonts\tficons.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -878,6 +885,8 @@
     <Content Include="IMG\icon-termpad\white\recall white.png" />
     <Content Include="IMG\icon-termpad\white\repeatcall white.png" />
     <Content Include="IMG\icon-termpad\white\transfer white.png" />
+    <Content Include="IMG\logotimefree_white.png" />
+    <Content Include="JS\AdminDashboard\main.js" />
     <Content Include="JS\bootstrap.js" />
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\classie.js" />
@@ -897,6 +906,7 @@
     <Content Include="JS\jquery.validate.min.js" />
     <Content Include="JS\KioskFewer\Date.js" />
     <Content Include="JS\KioskFewer\main.js" />
+    <Content Include="JS\metisMenu.js" />
     <Content Include="JS\modalEffects.js" />
     <Content Include="JS\modernizr.custom.28468.js" />
     <Content Include="JS\modernizr.custom.js" />
@@ -918,6 +928,10 @@
     <Content Include="fonts\termpadicons.eot" />
     <Content Include="fonts\termpadicons.ttf" />
     <Content Include="fonts\termpadicons.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1025,9 +1039,23 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="DashboardGeneralSetup.aspx.cs">
+      <DependentUpon>DashboardGeneralSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardGeneralSetup.aspx.designer.cs">
+      <DependentUpon>DashboardGeneralSetup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Display.aspx.cs">
       <DependentUpon>Display.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
