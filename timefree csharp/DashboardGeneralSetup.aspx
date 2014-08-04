@@ -281,61 +281,71 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="panel-heading">
-                                    Call Alert Settings
-                                </div>
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Voice
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Tone
-                                                </label>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
 
-                            <!-- /.row (nested) -->
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label>Call Alert Settings</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Voice
+                            </label>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="panel-heading">
-                                    Call Alert Settings
-                                </div>
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Voice
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Tone
-                                                </label>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-
-                            <!-- /.row (nested) -->
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Tone
+                            </label>
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label>Number of Counters</label>
+                        <input class="form-control checkbox" type="number">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label>Number of Counters</label>
+                        <input class="form-control checkbox" type="number">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Welcome SMS</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>SMS Alert</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Ticket Message</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Marquee</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+        <div class="row pull-right">
+            <button type="submit" class="btn btn-default">Save</button>
+            <button type="reset" class="btn btn-default">Cancel</button>
+        </div>
+        <!-- /.row -->
 
         </div>
         <!-- /#page-wrapper -->
