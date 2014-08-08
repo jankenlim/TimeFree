@@ -3,6 +3,11 @@ html, body, #wrapper {
     min-height: 100%;
 }
 
+.navbar-brand:hover {
+    background-color: transparent !important;
+}
+
+
 body {
     background-color: #06a1d8;
 }
@@ -133,7 +138,7 @@ a {
         z-index: 1;
         position: absolute;
         width: 250px;
-        margin-top: 80px;
+        margin-top: 9%;
     }
 
     .navbar-top-links .dropdown-messages,

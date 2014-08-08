@@ -925,6 +925,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="bin\TimeFree csharp.dll.config" />
+    <Content Include="referencecode.html" />
     <Content Include="Termpad.aspx" />
     <Content Include="TermpadInit.aspx" />
     <Content Include="WebForm1.aspx" />
