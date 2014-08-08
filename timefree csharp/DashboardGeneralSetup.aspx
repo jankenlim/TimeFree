@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="AdminDashboard.html">
-                    <img src="IMG/logocompany.png" style="height: 100%;" /></a>
+                    <img src="IMG/logotimefree_white.png" style="height: 100%;" /></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -289,26 +289,30 @@
                             <label>
                                 <input type="checkbox" value="">Voice
                             </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
+                            <label style="margin-left: 10px">
                                 <input type="checkbox" value="">Tone
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="col-lg-2 col-md-2 col-sm-2" style="border-left: 1px solid #ecf0f1">
                     <div class="form-group">
                         <label>Number of Counters</label>
                         <input class="form-control checkbox" type="number">
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="col-lg-3 col-md-3 col-sm-3" style="border-left: 1px solid #ecf0f1">
                     <div class="form-group">
-                        <label>Number of Counters</label>
-                        <input class="form-control checkbox" type="number">
+                        <label>SMS Alert Setting</label>
+                        <select class="form-control checkbox">
+                            <option>Number of Tickets Prior to SMS Alert</option>
+                            <option>Estimated Waiting Time</option>
+                        </select>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <hr />
             </div>
             <div class="row">
 
@@ -340,12 +344,12 @@
                     </div>
                 </div>
                 <!-- /.col-lg-12 -->
+                <div class="row pull-right">
+                    <button type="submit" class="btn btn-danger">Save</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </div>
             </div>
-        <div class="row pull-right">
-            <button type="submit" class="btn btn-default">Save</button>
-            <button type="reset" class="btn btn-default">Cancel</button>
-        </div>
-        <!-- /.row -->
+            <!-- /.row -->
 
         </div>
         <!-- /#page-wrapper -->

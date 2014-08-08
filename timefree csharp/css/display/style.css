@@ -1,3 +1,4 @@
+/* universal styles */
 body {
 	background-color: #e9f0f9 !important;
 	font-family: "Open Sans", sans-serif;
@@ -7,6 +8,9 @@ body {
 	border-radius: 0px !important;
 }
 
+/* end universal styles */
+
+/* display counter */
 .displaycounter {
 	padding-right: 0px !important;
 }
@@ -14,6 +18,8 @@ body {
 .displaycounter > h2 {
     margin-top: 5px;
 }
+
+/* end display counter */
 
 .darkblue {
     background: #003247 !important;

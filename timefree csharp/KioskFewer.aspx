@@ -38,7 +38,7 @@
                 <!-- list of services. note that it can only accomodate 12 columns -->
                 <% if(Transaction.Transactionlist!=null)
                     foreach(TimeFree_csharp.Structure.TransactionTypes i in Transaction.Transactionlist) {%>
-                <div class="col-lg-1 col-md-2 b-white">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 b-white">
                     <a id="openModalDialog" class="service md-trigger" data-toggle="modal" data-target="#currentlyServing" data-id="<%=i.tranType%>" data-wait="<%=i.waitingCustomers%>">
                         <!-- image of the service -->
                         <div class="b-white">

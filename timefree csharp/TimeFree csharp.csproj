@@ -205,9 +205,11 @@
     <Content Include="CSS\AdminDashboard\style.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\button.css" />
+    <Content Include="CSS\dataTables.bootstrap.css" />
     <Content Include="CSS\display\style.css" />
     <Content Include="CSS\font-awesome.css" />
     <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\jquery.dataTables.min.css" />
     <Content Include="CSS\kiosk fewer\buttonanimate.css" />
     <Content Include="CSS\kiosk fewer\default.css" />
     <Content Include="CSS\kiosk fewer\style.css" />
@@ -894,11 +896,13 @@
     <Content Include="JS\cssParser.js" />
     <Content Include="JS\custom.js" />
     <Content Include="JS\cycle.js" />
+    <Content Include="JS\dataTables.bootstrap.js" />
     <Content Include="JS\display\main.js" />
     <Content Include="JS\easing.js" />
     <Content Include="JS\filter.js" />
     <Content Include="JS\html5shim.js" />
     <Content Include="JS\jquery.cslider.js" />
+    <Content Include="JS\jquery.dataTables.min.js" />
     <Content Include="JS\jquery.flexslider-min.js" />
     <Content Include="JS\jquery.isotope.js" />
     <Content Include="JS\jquery.js" />
@@ -910,9 +914,11 @@
     <Content Include="JS\modalEffects.js" />
     <Content Include="JS\modernizr.custom.28468.js" />
     <Content Include="JS\modernizr.custom.js" />
+    <Content Include="JS\ManageTransactionDashboard\main.js" />
     <Content Include="JS\Termpad\main.js" />
     <Content Include="KioskFewer.aspx" />
     <Content Include="KioskThankYou.aspx" />
+    <Content Include="ManageTransactionDashboard.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -1079,6 +1085,13 @@
     </Compile>
     <Compile Include="KioskThankYou.aspx.designer.cs">
       <DependentUpon>KioskThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTransactionDashboard.aspx.cs">
+      <DependentUpon>ManageTransactionDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTransactionDashboard.aspx.designer.cs">
+      <DependentUpon>ManageTransactionDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
