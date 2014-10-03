@@ -14,6 +14,7 @@
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
     <script src="JS/KioskFewer/main.js"></script>
     <script src="JS/KioskFewer/Date.js"></script>
+    <script src="JS/Hammer/hammer.js"></script>
     <!-- js declarations -->
     <script type="text/javascript">
         function openModal() {
@@ -24,13 +25,22 @@
         function checkNet() {
             $('#checkNet').modal('show');
         }
+
+        $(function () {
+            new Hammer($('html'));
+            $('html').on('pinchout', prevent);
+        });
+
+        function prevent(ev) {
+            ev.gesture.preventDefault();
+        }
     </script>
 </head>
 <body>
     <div id="header">
         <div class="pull-left" id="clockholder" onload="date()">
         </div>
-        <img class="pull-right" src="img/logotimefree.png" style="height: 100%;" />
+        <img class="pull-right" src="img/logotimefree.png" id="tflogo" />
     </div>
     <div class="container" id="wrapper">
         <div id="content">

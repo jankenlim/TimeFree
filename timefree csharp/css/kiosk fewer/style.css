@@ -1,118 +1,136 @@
 ﻿/* universal styles */
 
-    html, body {
-        height:100%;
-        background-color: #06a1d8 !important;
-	    font-family: "Open Sans", sans-serif;
-        overflow: hidden;
-    }
+html, body {
+    height: 100%;
+    background-color: #06a1d8 !important;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
 
-    a:hover, a:visited, a:link, a:active {
-        text-decoration:none !important;
-    }
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none !important;
+}
 
-    * {
-        border-radius: 0 !important;
-    }
+* {
+    border-radius: 0 !important;
+}
 
 /* clock holder*/
 
+#clockholder {
+    font-size: 1em;
+}
+
+@media(min-width:1700px) {
     #clockholder {
-        display: none;
+        font-size: 2em;
     }
+}
 
-        @media(min-width:1700px) {
-            #clockholder {
-                display: block;
-            }
-        }
 
+/* tf logo */
+
+#tflogo {
+    height: 40px;
+}
+
+#header {
+    height: 80px;
+}
+
+@media(min-width:1700px) {
+    #tflogo {
+        height: 50px;
+    }
+    #header {
+        height: 100px;
+    }
+}
 
 /* additional settings for the container class */
-    #wrapper {
-        min-height:95%;
-        height:95%;
-        overflow: hidden !important;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 25px !important;
-    }   
+#wrapper {
+    min-height: 95%;
+    height: 95%;
+    overflow: hidden !important;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px !important;
+}
 
-    #content {
-        height:70%;
-        min-height:70%;
-    }
+#content {
+    height: 70%;
+    min-height: 70%;
+}
 
 /* header styles*/
-    #header {
-        height:100px;
-        padding: 20px;
-        background: white;
-        -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.39);
-        -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.39);
-        box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.39);
-    }
+#header {
+    padding: 20px;
+    background: white;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+    box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.39);
+}
 
 /* service list holder */
-    
-    /* image holder for the service */
-        .b-white {
-            background-color: white;
-            height: 80%;
-            min-height: 80%;
-            padding-left: 15px;
-        }
-    
-    /* text holder for the service */
-        .b-darkblue {
-            background-color: #003247 !important;
-            color: white;
-            height: 20%;
-            min-height: 20%;
-            min-width: 100%;
-            width: 100%;
-            margin: 0 auto;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
 
-        .b-darkblue > h2 {
-            margin-top: 7px;
-            font-size: 1em;
-        }
+/* image holder for the service */
+.b-white {
+    background-color: white;
+    height: 80%;
+    min-height: 80%;
+    padding-left: 15px;
+}
 
-            @media(min-width:1700px) {
-                .b-darkblue > h2 {
-                    font-size: 2em !important;
-                }
-            }
+/* text holder for the service */
+.b-darkblue {
+    background-color: #003247 !important;
+    color: white;
+    height: 20%;
+    min-height: 20%;
+    min-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .b-darkblue > h2 {
+        margin-top: 7px;
+        font-size: 1em;
+    }
+
+@media(min-width:1700px) {
+    .b-darkblue > h2 {
+        font-size: 2em !important;
+    }
+}
 
 
-    /* image settings for service */
-        .imageholder {
-            height: 80% !important;
-            min-height: 80% !important;
-            margin-top: 90px;
-        }
+/* image settings for service */
+.imageholder {
+    height: 80% !important;
+    min-height: 80% !important;
+    margin-top: 90px;
+}
 
-        .imageclip {
-            height: 40%;
-            overflow: hidden;
-            margin-top: 110px;
-        }
+.imageclip {
+    height: 40%;
+    overflow: hidden;
+    margin-top: 110px;
+}
 
-    /* general override settings */
-        .col-lg-1 {
-            margin-left: 5px;
-            margin-right: 5px;
-            height: 100% !important;
-            min-height: 100% !important;
-            -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.39);
-            -moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.39);
-            box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.39);
-            overflow: hidden;
-            padding: 0 !important;
-        }
+/* general override settings */
+.col-lg-1 {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 100% !important;
+    min-height: 100% !important;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.39);
+    overflow: hidden;
+    padding: 0 !important;
+}
 
 /* end service list holder */
 
@@ -123,7 +141,7 @@
 }
 
 #rightpanel {
-    margin-top: 20px; 
+    margin-top: 20px;
     height: 100%;
     min-height: 100%;
 }
@@ -153,7 +171,6 @@
 
 #clockholder {
     margin-top: 6px;
-    font-size: 2em;
 }
 
 .modal-content {

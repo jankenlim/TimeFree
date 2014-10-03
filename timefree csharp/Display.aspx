@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<img src="img/logotimefree.png" style="width: 35%" />
-					<img src="img/logocompany.jpg" style="width: 35%; padding-left: 20px" />
+					<img src="img/logocompany.png" style="width: 35%; padding-left: 20px" />
 				</div>
 				<div class="col-lg-6">
 					

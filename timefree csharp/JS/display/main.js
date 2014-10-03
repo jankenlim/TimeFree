@@ -34,7 +34,7 @@
                         speech[i].text = 'Now Serving number' + CS.queueNo + ' at Counter ' + CS.counterNo;
 
                         $('#counterholder').append(
-                        '<div class="col-lg-3 displaycounter" id="' + CS.counterNo + '">' +
+                        '<div class="col-lg-3 col-md-3 displaycounter" id="' + CS.counterNo + '">' +
                             '<div class="b-blue" id="bbl' + CS.counterNo + '">' +
                                 '<div class="pull-right" style="width: 100%">' +
                                     '<h1 id="queue' + CS.counterNo + '">' + CS.queueNo + '</h1>' +

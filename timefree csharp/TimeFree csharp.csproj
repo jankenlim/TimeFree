@@ -159,7 +159,6 @@
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.xml" />
     <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
     <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
@@ -901,6 +900,25 @@
     <Content Include="JS\display\main.js" />
     <Content Include="JS\easing.js" />
     <Content Include="JS\filter.js" />
+    <Content Include="JS\Hammer\expose.js" />
+    <Content Include="JS\Hammer\hammer.js" />
+    <Content Include="JS\Hammer\input.js" />
+    <Content Include="JS\Hammer\input\mouse.js" />
+    <Content Include="JS\Hammer\input\pointerevent.js" />
+    <Content Include="JS\Hammer\input\singletouch.js" />
+    <Content Include="JS\Hammer\input\touch.js" />
+    <Content Include="JS\Hammer\input\touchmouse.js" />
+    <Content Include="JS\Hammer\manager.js" />
+    <Content Include="JS\Hammer\recognizer.js" />
+    <Content Include="JS\Hammer\recognizers\attribute.js" />
+    <Content Include="JS\Hammer\recognizers\pan.js" />
+    <Content Include="JS\Hammer\recognizers\pinch.js" />
+    <Content Include="JS\Hammer\recognizers\press.js" />
+    <Content Include="JS\Hammer\recognizers\rotate.js" />
+    <Content Include="JS\Hammer\recognizers\swipe.js" />
+    <Content Include="JS\Hammer\recognizers\tap.js" />
+    <Content Include="JS\Hammer\touchaction.js" />
+    <Content Include="JS\Hammer\utils.js" />
     <Content Include="JS\html5shim.js" />
     <Content Include="JS\jquery.cslider.js" />
     <Content Include="JS\jquery.dataTables.min.js" />
@@ -940,6 +958,8 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\tfqmsc0b0sit - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tfqmsc0b0sit - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
